@@ -41,6 +41,7 @@ export class AuthService {
           createdAt: true,
         },
       });
+      return user;
     } catch (error) {
       if (error instanceof PrismaClientKnownRequestError) {
         if (error.code === 'P2002') {
