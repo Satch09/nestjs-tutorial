@@ -6,7 +6,6 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
 import { User } from '@prisma/client';
 import { Request } from 'express';
 import { GetUser } from '../auth/decorator';
@@ -20,7 +19,6 @@ export class UserController {
   constructor(private userService: UserService) {}
   @Get('me')
   getMe(@GetUser() user: User) {
-    console.log({ user: user });
     return user;
   }
   @Patch()

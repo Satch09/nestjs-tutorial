@@ -1,5 +1,6 @@
 import {
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsString,
 } from 'class-validator';
@@ -13,5 +14,5 @@ export class CreateBookmarkDto {
   description?: string;
   @IsString()
   @IsNotEmpty()
-  url: string;
+  link: string;
 }

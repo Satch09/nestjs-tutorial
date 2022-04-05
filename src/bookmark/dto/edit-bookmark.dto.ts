@@ -1,4 +1,8 @@
-import { IsOptional, IsString } from 'class-validator';
+import {
+  IsAlphanumeric,
+  IsOptional,
+  IsString,
+} from 'class-validator';
 
 export class EditBookmarkDto {
   @IsString()
@@ -9,5 +13,5 @@ export class EditBookmarkDto {
   description?: string;
   @IsString()
   @IsOptional()
-  url?: string;
+  link?: string;
 }
